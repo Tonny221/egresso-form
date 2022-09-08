@@ -1,8 +1,8 @@
 import { Box, styled, Typography } from '@mui/material'
 import React from 'react'
 
-const HeaderBox = styled(Box)(({}) => ({
-    backgroundColor: '#007d00',
+const HeaderBox = styled(Box)(({ theme }) => ({
+    backgroundColor: '#001f7d',
     color: 'white',
     padding: '1rem'
 }))
