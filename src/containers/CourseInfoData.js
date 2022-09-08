@@ -6,6 +6,7 @@ import { useState } from 'react'
 const CourseInfoData = () => {
     const [others, setOthers] = useState(false)
     const [jobOthers, setJobOthers] = useState(false)
+    const [othersReasons, setOthersReasons] = useState(false)
 
     const handleOthers = () => {
         setOthers(!others);
@@ -13,6 +14,18 @@ const CourseInfoData = () => {
 
     const handleJobOthers = () => {
         setJobOthers(!jobOthers);
+    }
+
+    const turnJobOthersFalse = () => {
+        if (jobOthers === true) { setJobOthers(!jobOthers) }
+    }
+
+    const handleOthersReasons = () => {
+        setOthersReasons(!othersReasons)
+    }
+
+    const turnOthersReasonsFalse = () => {
+        if (othersReasons === true) { setOthersReasons(!othersReasons) }
     }
 
     return (
@@ -60,24 +73,25 @@ const CourseInfoData = () => {
                         <FormControlLabel control={<Checkbox />} label='Atividades práticas' />
                         <FormControlLabel control={<Checkbox />} label='Projetos de extensão' />
                         <FormControlLabel control={<Checkbox />} label='Eventos' />
-                        <FormControlLabel control={<Checkbox />} label='Outros (descrever)' onChange={handleOthers}/>
-                        { others ? <TextField variant='filled' /> : <></> }
+                        <FormControlLabel control={<Checkbox />} label='Outros (descrever)' onChange={handleOthers} />
+                        {others ? <TextField variant='filled' /> : <></>}
                     </FormGroup>
                     <FormGroup>
                         <Typography mb={2}>Atua profissionalmente na sua área de formação?</Typography>
-                        <RadioGroup sx={{marginBottom: '2rem'}}>
-                            <FormControlLabel control={<Radio />} label='Sim' value={'sim'} onChange={handleJobOthers}/>
-                            <FormControlLabel control={<Radio />} label='Não' value={'nao'} onChange={handleJobOthers}/>
+                        <RadioGroup sx={{ marginBottom: '2rem' }}>
+                            <FormControlLabel control={<Radio />} label='Sim' value={'sim'} onChange={turnJobOthersFalse} />
+                            <FormControlLabel control={<Radio />} label='Não' value={'nao'} onChange={handleJobOthers} />
                         </RadioGroup>
-                        <Box>
+                        {jobOthers ? <Box>
                             <Typography mb={2}>Assinale o motivo: </Typography>
                             <RadioGroup>
-                                <FormControlLabel control={<Radio />} label='Insegurança em atuar na área de formação' value={'1'} />
-                                <FormControlLabel control={<Radio />} label='Salário melhor em outra área' value={'2'} />
-                                <FormControlLabel control={<Radio />} label='Falta de oportunidade profissional' value={'3'} />
-                                <FormControlLabel control={<Radio />} label='Outros motivos' value={'4'} />
+                                <FormControlLabel control={<Radio />} label='Insegurança em atuar na área de formação' value={'1'} onChange={turnOthersReasonsFalse} />
+                                <FormControlLabel control={<Radio />} label='Salário melhor em outra área' value={'2'} onChange={turnOthersReasonsFalse} />
+                                <FormControlLabel control={<Radio />} label='Falta de oportunidade profissional' value={'3'} onChange={turnOthersReasonsFalse} />
+                                <FormControlLabel control={<Radio />} label='Outros motivos (descrever)' value={'4'} onChange={handleOthersReasons} />
+                                {othersReasons ? <TextField variant='filled' /> : <></>}
                             </RadioGroup>
-                        </Box>
+                        </Box> : <></>}
                     </FormGroup>
                 </DataForm>
             </DataContainer>
