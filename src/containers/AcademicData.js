@@ -13,7 +13,11 @@ const AcademicData = () => {
 
     const handleCourse = () => {
         setCourse(!course);
-        console.log("AAAAAAAAAA");
+        console.log(course);
+    }
+
+    const turnCourseFalse = () => {
+        if (course === true) { setCourse(!course) }
     }
 
     return (
@@ -51,11 +55,11 @@ const AcademicData = () => {
                     <FormGroup>
                         <Typography>Além do Curso realizado na Instituição de ensino que se formou, você possui outro(s) Curso(s) de Graduação?</Typography>
                         <RadioGroup row>
-                            <FormControlLabel value={'Sim'} control={<Radio />} label='Sim' onChange={handleCourse}/>
+                            <FormControlLabel value={'Sim'} control={<Radio />} label='Sim' onChange={turnCourseFalse} />
                             <FormControlLabel value={'Não'} control={<Radio />} label='Não' onChange={handleCourse} />
                         </RadioGroup>
                     </FormGroup>
-                    { course ? <TextField variant='filled' label='Qual (is) são os cursos de graduação'/> : <></>}
+                    {course ? <TextField variant='filled' label='Qual (is) são os cursos de graduação' /> : <></>}
                     <TextField variant='filled' label='Quais os cursos extracurriculares realizado durante a sua graduação?' />
                 </DataForm>
             </DataContainer>
