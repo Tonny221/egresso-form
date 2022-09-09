@@ -3,6 +3,7 @@ import PersonalData from "./containers/PersonalData";
 import AcademicData from "./containers/AcademicData";
 import CourseInfoData from "./containers/CourseInfoData";
 import ProInfoData from "./containers/ProInfoData";
+import PCDInfo from "./containers/PCDInfo";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AcademicData />
       <CourseInfoData />
       <ProInfoData />
+      <PCDInfo />
     </>
   );
 }
