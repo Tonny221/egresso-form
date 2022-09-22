@@ -2,11 +2,9 @@ import { Box, styled, Typography } from '@mui/material'
 import React from 'react'
 
 const HeaderBox = styled(Box)(({ theme }) => ({
-    backgroundColor: '#001f7d',
+    backgroundColor: 'blue',
     color: 'white',
-    padding: '1rem',
-    width: '100%',
-    marginBottom: '2rem'
+    padding: '1rem'
 }))
 
 const Header = () => {
