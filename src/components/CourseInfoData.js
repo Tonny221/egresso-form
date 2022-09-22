@@ -1,6 +1,5 @@
 import { Checkbox, FormControlLabel, FormGroup, Radio, RadioGroup, TextField, Typography, Box, Stack } from '@mui/material'
 import React from 'react'
-import { DataForm, DataContainer } from './PersonalData'
 import { useState } from 'react'
 
 const CourseInfoData = () => {

@@ -1,6 +1,5 @@
 import { Box, FormControlLabel, FormGroup, Radio, RadioGroup, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
-import { DataForm, DataContainer } from './PersonalData'
 import { useState } from 'react'
 
 const PCDInfo = () => {

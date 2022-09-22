@@ -1,6 +1,5 @@
 import { FormGroup, TextField, Typography, MenuItem, FormControlLabel, Radio, RadioGroup, Stack } from '@mui/material';
 import React from 'react'
-import { DataForm, DataContainer } from './PersonalData'
 import { useState } from 'react';
 
 const AcademicData = () => {
