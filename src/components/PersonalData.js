@@ -37,7 +37,7 @@ const PersonalData = () => {
         <Stack rowGap={4}>
             <Typography variant='h3'>Dados pessoais</Typography>
             <TextField variant='filled' label='Nome' />
-            <TextField variant='filled' label='Idade' type='number' />
+            <TextField variant='filled' label='Idade' />
             <TextField variant='filled' label='Estado Civil' />
             <TextField variant='filled' label='Cidade' />
             <TextField select variant='filled' label='Estado' defaultValue={'Seu estado'} value={select} onChange={handleChange}>
@@ -45,7 +45,7 @@ const PersonalData = () => {
                 <MenuItem value={2}>Estado 2</MenuItem>
                 <MenuItem value={3}>Estado 3</MenuItem>
             </TextField>
-            <TextField variant='filled' label='Telefone' type='number' />
+            <TextField variant='filled' label='Telefone' />
             <TextField variant='filled' label='Email' />
             <FormGroup>
                 <Typography variant='h6'>Podemos disponibilizar os dados do cadastro para contratação de empresas parceiras?</Typography>
