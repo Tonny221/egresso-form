@@ -22,19 +22,15 @@ const AcademicData = () => {
     return (
         <Stack rowGap={4}>
             <Typography variant='h3'>Informações academicas</Typography>
-            <TextField variant='filled' label='Nome da Instituição que terminou sua graduação: ' />
-            <TextField variant='filled' label='Nome do campus: ' />
-            <TextField variant='filled' label='Qual cidade: ' />
+            <TextField variant='filled' label='Nome da Instituição que terminou sua graduação' />
+            <TextField variant='filled' label='Nome do campus' />
+            <TextField variant='filled' label='Qual cidade' />
             <TextField select variant='filled' label='Estado' defaultValue={'Seu estado'} value={select} onChange={handleChange}>
                 <MenuItem value={1}>Estado 1</MenuItem>
                 <MenuItem value={2}>Estado 2</MenuItem>
                 <MenuItem value={3}>Estado 3</MenuItem>
             </TextField>
-            <TextField select variant='filled' label='Curso' defaultValue={'Qual seu curso'} value={select} onChange={handleChange}>
-                <MenuItem value={1}>Curso 1</MenuItem>
-                <MenuItem value={2}>Curso 2</MenuItem>
-                <MenuItem value={3}>Curso 3</MenuItem>
-            </TextField>
+            <TextField variant='filled' label='Curso' />
             <FormGroup>
                 <Typography variant='h6'>Instituição:</Typography>
                 <RadioGroup>
@@ -52,12 +48,12 @@ const AcademicData = () => {
             <FormGroup>
                 <Typography variant='h6'>Além do Curso realizado na Instituição de ensino que se formou, você possui outro(s) Curso(s) de Graduação?</Typography>
                 <RadioGroup>
-                    <FormControlLabel value={'Sim'} control={<Radio />} label='Sim' onChange={turnCourseFalse} />
-                    <FormControlLabel value={'Não'} control={<Radio />} label='Não' onChange={handleCourse} />
+                    <FormControlLabel value={'Sim'} control={<Radio />} label='Sim' onChange={handleCourse} />
+                    <FormControlLabel value={'Não'} control={<Radio />} label='Não' onChange={turnCourseFalse} />
                 </RadioGroup>
             </FormGroup>
             {course ? <TextField variant='filled' label='Qual (is) são os cursos de graduação' /> : <></>}
-            <TextField variant='filled' label='Quais os cursos extracurriculares realizado durante a sua graduação?' />
+            <TextField variant='filled' label='Coeficiente de rendimento (opcional)' />
         </Stack>
     );
 }
