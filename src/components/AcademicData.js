@@ -37,21 +37,21 @@ const AcademicData = () => {
             </TextField>
             <FormGroup>
                 <Typography variant='h6'>Instituição:</Typography>
-                <RadioGroup row>
+                <RadioGroup>
                     <FormControlLabel value={'Pública'} control={<Radio />} label='Pública' />
                     <FormControlLabel value={'Particular'} control={<Radio />} label='Particular' />
                 </RadioGroup>
             </FormGroup>
             <FormGroup>
                 <Typography variant='h6'>Modalidade de ensino:</Typography>
-                <RadioGroup row>
+                <RadioGroup>
                     <FormControlLabel value={'Presencial'} control={<Radio />} label='Presencial' />
                     <FormControlLabel value={'Distância'} control={<Radio />} label='Distância' />
                 </RadioGroup>
             </FormGroup>
             <FormGroup>
                 <Typography variant='h6'>Além do Curso realizado na Instituição de ensino que se formou, você possui outro(s) Curso(s) de Graduação?</Typography>
-                <RadioGroup row>
+                <RadioGroup>
                     <FormControlLabel value={'Sim'} control={<Radio />} label='Sim' onChange={turnCourseFalse} />
                     <FormControlLabel value={'Não'} control={<Radio />} label='Não' onChange={handleCourse} />
                 </RadioGroup>
