@@ -15,12 +15,15 @@ const PersonalData = () => {
             <TextField variant='filled' label='Nome' />
             <TextField variant='filled' label='Idade' />
             <TextField variant='filled' label='Estado Civil' />
-            <TextField variant='filled' label='Cidade' />
             <TextField select variant='filled' label='Estado' defaultValue={'Seu estado'} value={select} onChange={handleChange}>
                 <MenuItem value={1}>Estado 1</MenuItem>
                 <MenuItem value={2}>Estado 2</MenuItem>
                 <MenuItem value={3}>Estado 3</MenuItem>
             </TextField>
+            <TextField variant='filled' label='Cidade' />
+            <TextField variant='filled' label='Bairro' />
+            <TextField variant='filled' label='Rua' />
+            <TextField variant='filled' label='Número' />
             <TextField variant='filled' label='Telefone' />
             <TextField variant='filled' label='Email' />
             <FormGroup>
