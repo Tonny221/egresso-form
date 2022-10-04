@@ -1,4 +1,4 @@
-import { FormControlLabel, FormGroup, MenuItem, Radio, RadioGroup, Stack, TextField, Typography } from '@mui/material'
+import { FormControlLabel, FormGroup, Grid, MenuItem, Radio, RadioGroup, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { useState } from 'react'
 
@@ -15,17 +15,33 @@ const PersonalData = () => {
             <TextField variant='filled' label='Nome' />
             <TextField variant='filled' label='Idade' />
             <TextField variant='filled' label='Estado Civil' />
-            <TextField select variant='filled' label='Estado' defaultValue={'Seu estado'} value={select} onChange={handleChange}>
-                <MenuItem value={1}>Estado 1</MenuItem>
-                <MenuItem value={2}>Estado 2</MenuItem>
-                <MenuItem value={3}>Estado 3</MenuItem>
-            </TextField>
-            <TextField variant='filled' label='Cidade' />
-            <TextField variant='filled' label='Bairro' />
-            <TextField variant='filled' label='Rua' />
-            <TextField variant='filled' label='Número' />
-            <TextField variant='filled' label='Telefone' />
-            <TextField variant='filled' label='Email' />
+            <Grid container spacing={2}>
+                <Grid item xs={4}>
+                    <TextField fullWidth select variant='filled' label='Estado' defaultValue={'Seu estado'} value={select} onChange={handleChange}>
+                        <MenuItem value={1}>Estado 1</MenuItem>
+                        <MenuItem value={2}>Estado 2</MenuItem>
+                        <MenuItem value={3}>Estado 3</MenuItem>
+                    </TextField>
+                </Grid>
+                <Grid item xs={4}>
+                    <TextField fullWidth variant='filled' label='Cidade' />
+                </Grid>
+                <Grid item xs={4}>
+                    <TextField fullWidth variant='filled' label='Bairro' />
+                </Grid>
+                <Grid item xs={10}>
+                    <TextField fullWidth variant='filled' label='Rua' />
+                </Grid>
+                <Grid item xs={2}>
+                    <TextField fullWidth variant='filled' label='Número' />
+                </Grid>
+                <Grid item xs={4}>
+                    <TextField fullWidth variant='filled' label='Telefone' />
+                </Grid>
+                <Grid item xs={8}>
+                    <TextField fullWidth variant='filled' label='Email' />
+                </Grid>
+            </Grid>
             <FormGroup>
                 <Typography variant='h6'>Podemos disponibilizar os dados do cadastro para contratação de empresas parceiras?</Typography>
                 <RadioGroup>
